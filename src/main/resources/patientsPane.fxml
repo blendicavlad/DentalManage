@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="patientsPane" layoutX="10.0" layoutY="10.0" prefHeight="620.0" prefWidth="693.0" style="-fx-background-color: #2D3447;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller.medic.PatientsController">
+    <Text fill="WHITE" layoutX="250.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patients management">
+        <font>
+            <Font name="Kefa Regular" size="21.0" />
+        </font>
+    </Text>
+    <TableView fx:id="patientsTable" layoutX="10.0" layoutY="40.0" prefHeight="600.0" prefWidth="451.0" stylesheets="@style.css">
+        <columns>
+            <TableColumn fx:id="patientID" prefWidth="37.411293029785156" text="ID" />
+            <TableColumn fx:id="patientName" prefWidth="88.58868789672852" text="Patient name" />
+            <TableColumn fx:id="patientMail" prefWidth="81.0" text="Email" />
+            <TableColumn fx:id="patientPhone" prefWidth="90.0" text="Phone" />
+            <TableColumn fx:id="interventionCount" prefWidth="105.0" text="Intervention Nr." />
+            <TableColumn fx:id="isDeleted" prefWidth="49.0" text="Active" />
+        </columns>
+    </TableView>
+    <JFXTextArea fx:id="resultConsole" editable="false" layoutX="479.0" layoutY="520.0" prefHeight="116.0" prefWidth="200.0" styleClass="jfx-text-area" stylesheets="@style.css" unFocusColor="WHITE" wrapText="true" />
+    <Text fill="WHITE" layoutX="520.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result Console" wrappingWidth="127.56250685453415">
+        <font>
+            <Font name="Kefa Regular" size="17.0" />
+        </font>
+    </Text>
+    <JFXButton fx:id="showAppointments" layoutX="516.0" layoutY="251.0" onAction="#showAppAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Appointments" />
+    <JFXButton fx:id="searchBtn" layoutX="516.0" layoutY="291.0" onAction="#searchAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Search" />
+    <JFXButton fx:id="addBtn" layoutX="516.0" layoutY="331.0" onAction="#insertAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Add" />
+    <JFXButton fx:id="updateBtn" layoutX="516.0" layoutY="371.0" onAction="#updateAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Update" />
+    <JFXButton fx:id="reactivateBtn" layoutX="516.0" layoutY="411.0" onAction="#reactivateAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Reactivate" />
+    <JFXButton fx:id="deleteBtn" layoutX="516.0" layoutY="451.0" onAction="#deleteAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Delete" />
+    <JFXTextField fx:id="idField" focusColor="#2196f3" layoutX="505.0" layoutY="40.0" promptText="ID" styleClass="jfx-textfield" stylesheets="@style.css" unFocusColor="WHITE">
+        <font>
+            <Font name="Kefa Regular" size="13.0" />
+        </font>
+    </JFXTextField>
+    <JFXTextField fx:id="patientNameField" focusColor="#2196f3" layoutX="505.0" layoutY="80.0" promptText="Patient Name" styleClass="jfx-textfield" stylesheets="@style.css" unFocusColor="WHITE" />
+    <JFXTextField fx:id="phoneField" focusColor="#2196f3" layoutX="505.0" layoutY="120.0" promptText="Phone" styleClass="jfx-textfield" stylesheets="@style.css" unFocusColor="WHITE" />
+    <JFXTextField fx:id="emailField" focusColor="#2196f3" layoutX="505.0" layoutY="160.0" promptText="E-Mail" styleClass="jfx-textfield" stylesheets="@style.css" unFocusColor="WHITE" />
+   <JFXButton fx:id="getRevenueBtn" layoutX="516.0" layoutY="211.0" onAction="#getRevenueAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Get revenue" />
+</AnchorPane>

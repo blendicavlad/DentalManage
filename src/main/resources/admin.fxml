@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1000.0" style="-fx-background-color: #2D3447#2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller.admin.AdminController">
+   <children>
+      <Pane layoutX="16.0" layoutY="16.0" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Line endY="717.0" fill="BLACK" layoutX="250.0" strokeWidth="5.0" />
+            <Text fill="#2196f3" layoutX="3.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN PANEL" textAlignment="CENTER" x="15.0" y="40.0">
+               <font>
+                  <Font name="Kefa Bold" size="30.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="homeBtn" buttonType="RAISED" layoutY="120.0" minHeight="50.0" onAction="#homeAction" prefWidth="225.0" stylesheets="@style.css" text="Home">
+               <font>
+                  <Font name="Kefa Bold" size="26.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="usersBtn" buttonType="RAISED" layoutY="200.0" minHeight="50.0" onAction="#usersAction" prefWidth="225.0" stylesheets="@style.css" text="Users">
+               <font>
+                  <Font name="Kefa Bold" size="26.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="medicsBtn" buttonType="RAISED" layoutY="280.0" minHeight="50.0" onAction="#medicsAction" prefWidth="225.0" stylesheets="@style.css" text="Medics">
+               <font>
+                  <Font name="Kefa Bold" size="26.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="interventionsBtn" buttonType="RAISED" layoutY="360.0" onAction="#interventionsAction" minHeight="50.0" prefWidth="225.0" stylesheets="@style.css" text="Interventions">
+               <font>
+                  <Font name="Kefa Bold" size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="logOutBtn" buttonType="RAISED" layoutY="600.0" minHeight="50.0" onAction="#logOutAction" prefWidth="225.0" stylesheets="@style.css" text="Log Out">
+               <font>
+                  <Font name="Kefa Bold" size="25.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane fx:id="mainPane" layoutX="10.0" layoutY="10.0" prefHeight="640.0" prefWidth="693.0" style="-fx-background-color: #2D3447#2D3447 #2D3447#2D3447;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="10.0">
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="userAppointments" prefHeight="580.0" prefWidth="928.0" style="-fx-background-color: #2D3447;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller.medic.PatientAppointmentsController">
+    <Text fill="WHITE" layoutX="250.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointments of:">
+        <font>
+            <Font name="Kefa Regular" size="21.0" />
+        </font>
+    </Text>
+    <TableView fx:id="appointmentsTable" layoutX="10.0" layoutY="40.0" prefHeight="527.0" prefWidth="683.0" stylesheets="@style.css">
+        <columns>
+            <TableColumn fx:id="appointmentID" prefWidth="37.0" text="ID" />
+            <TableColumn fx:id="userName" prefWidth="118.0" text="Medic name" />
+            <TableColumn fx:id="startDate" prefWidth="150.0" text="Start date" />
+            <TableColumn fx:id="endDate" prefWidth="155.0" text="End date" />
+            <TableColumn fx:id="duration" prefWidth="61.0" text="Duration" />
+            <TableColumn fx:id="interventions" prefWidth="112.0" text="Interventions Nr." />
+            <TableColumn fx:id="isDeleted" prefWidth="47.0" text="Active" />
+        </columns>
+    </TableView>
+    <JFXTextArea fx:id="resultConsole" editable="false" layoutX="705.0" layoutY="448.0" prefHeight="116.0" prefWidth="200.0" styleClass="jfx-text-area" stylesheets="@style.css" unFocusColor="WHITE" wrapText="true" />
+    <Text fill="WHITE" layoutX="746.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result Console" wrappingWidth="114.40361075351973">
+        <font>
+            <Font name="Kefa Regular" size="17.0" />
+        </font>
+    </Text>
+    <JFXButton fx:id="showInterventions" layoutX="742.0" layoutY="179.0" onAction="#showIntAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Interventions" />
+    <JFXButton fx:id="searchBtn" layoutX="742.0" layoutY="219.0" onAction="#searchAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Search" />
+    <JFXButton fx:id="addBtn" layoutX="742.0" layoutY="259.0" onAction="#insertAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Add" />
+    <JFXButton fx:id="updateBtn" layoutX="742.0" layoutY="299.0" onAction="#updateAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Update" />
+    <JFXButton fx:id="reactivateBtn" layoutX="742.0" layoutY="339.0" onAction="#reactivateAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Reactivate" />
+    <JFXButton fx:id="deleteBtn" layoutX="742.0" layoutY="379.0" onAction="#deleteAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Delete" />
+    <JFXTextField fx:id="idField" focusColor="#2196f3" layoutX="725.0" layoutY="47.0" promptText="ID" styleClass="jfx-textfield" stylesheets="@style.css" unFocusColor="WHITE">
+        <font>
+            <Font name="Kefa Regular" size="13.0" />
+        </font>
+    </JFXTextField>
+    <JFXDatePicker fx:id="startDatePicker" defaultColor="#2196f3" layoutX="725.0" layoutY="87.0" prefHeight="25.0" prefWidth="154.0" promptText="Date" stylesheets="@style.css" />
+   <Text fx:id="patientName" fill="WHITE" layoutX="416.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient" wrappingWidth="226.72802734375">
+      <font>
+         <Font name="Kefa Regular" size="21.0" />
+      </font>
+   </Text>
+   <JFXTimePicker fx:id="startTimePicker" defaultColor="#2196f3" layoutX="725.0" layoutY="134.0" prefHeight="27.0" prefWidth="154.0" promptText="Start time" stylesheets="@style.css" />
+</AnchorPane>

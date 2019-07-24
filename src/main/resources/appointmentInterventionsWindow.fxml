@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="appointmentInterventions" prefHeight="580.0" prefWidth="690.0" style="-fx-background-color: #2D3447;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller.medic.AppointmentInterventionsController">
+    <Text fill="WHITE" layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interventions of appointment: ">
+        <font>
+            <Font name="Kefa Regular" size="21.0" />
+        </font>
+    </Text>
+   <Text fill="WHITE" layoutX="460.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient: " wrappingWidth="223.7489689155272">
+      <font>
+         <Font name="Kefa Regular" size="21.0" />
+      </font>
+   </Text>
+    <TableView fx:id="interventionsTable" layoutX="10.0" layoutY="40.0" prefHeight="222.0" prefWidth="441.0" stylesheets="@style.css">
+        <columns>
+            <TableColumn fx:id="interventionID" prefWidth="37.0" text="ID" />
+            <TableColumn fx:id="interventionName" prefWidth="241.2840347290039" text="Intervention Name" />
+            <TableColumn fx:id="interventionPrice" prefWidth="72.990966796875" text="Price" />
+            <TableColumn fx:id="interventionDuration" prefWidth="87.93304443359375" text="Duration" />
+        </columns>
+    </TableView>
+    <JFXTextArea fx:id="resultConsole" editable="false" layoutX="470.0" layoutY="442.0" prefHeight="116.0" prefWidth="200.0" styleClass="jfx-text-area" stylesheets="@style.css" unFocusColor="WHITE" wrapText="true" />
+    <Text fill="WHITE" layoutX="510.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result Console" wrappingWidth="114.40361075351973">
+        <font>
+            <Font name="Kefa Regular" size="17.0" />
+        </font>
+    </Text>
+    <JFXButton fx:id="searchBtn" layoutX="510.0" layoutY="98.0" onAction="#searchAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Search" />
+    <JFXButton fx:id="addBtn" layoutX="510.0" layoutY="138.0" onAction="#insertAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Add" />
+    <JFXButton fx:id="removeBtn" layoutX="510.0" layoutY="178.0" onAction="#deleteAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Remove" />
+    <JFXTextField fx:id="idField" focusColor="#2196f3" layoutX="495.0" layoutY="38.0" promptText="ID" styleClass="jfx-textfield" stylesheets="@style.css" unFocusColor="WHITE">
+        <font>
+            <Font name="Kefa Regular" size="13.0" />
+        </font>
+    </JFXTextField>
+   <Text fill="WHITE" layoutX="10.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available interventions to add">
+      <font>
+         <Font name="Kefa Regular" size="21.0" />
+      </font>
+   </Text>
+   <Text fx:id="appointmentID" fill="WHITE" layoutX="297.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="52.21295166015625">
+      <font>
+         <Font name="Kefa Regular" size="21.0" />
+      </font>
+   </Text>
+   <Text fx:id="patientName" fill="WHITE" layoutX="540.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient name" wrappingWidth="151.25753784179688">
+      <font>
+         <Font name="Kefa Regular" size="21.0" />
+      </font>
+   </Text>
+   <TableView fx:id="availableInterventionsTable" layoutX="10.0" layoutY="310.0" prefHeight="250.0" prefWidth="441.0" stylesheets="@style.css">
+      <columns>
+         <TableColumn fx:id="availableInterventionID" prefWidth="37.0" text="ID" />
+         <TableColumn fx:id="availableInterventionName" prefWidth="241.2840347290039" text="Intervention Name" />
+         <TableColumn fx:id="availableInterventionPrice" prefWidth="72.990966796875" text="Price" />
+         <TableColumn fx:id="availableInterventionDuration" prefWidth="87.93304443359375" text="Duration" />
+      </columns>
+   </TableView>
+</AnchorPane>

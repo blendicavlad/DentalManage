@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="usersPane" layoutX="10.0" layoutY="10.0" prefHeight="620.0" prefWidth="693.0" style="-fx-background-color: #2D3447;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller.admin.UserPaneController">
+   <JFXComboBox fx:id="jobCombo" focusColor="#2196f3" layoutX="495.0" layoutY="240.0" prefWidth="165.0" promptText="Job" styleClass="jfx-combo-box" stylesheets="@style.css" unFocusColor="WHITE" />
+    <Text fill="WHITE" layoutX="250.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Management">
+        <font>
+            <Font name="Kefa Regular" size="21.0" />
+        </font>
+    </Text>
+    <TableView fx:id="userTable" layoutX="10.0" layoutY="40.0" prefHeight="600.0" prefWidth="451.0" stylesheets="@style.css">
+        <columns>
+            <TableColumn fx:id="userId" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="userName" prefWidth="75.0" text="User name" />
+            <TableColumn fx:id="userPhone" prefWidth="75.0" text="Phone" />
+            <TableColumn fx:id="userMail" prefWidth="75.0" text="E-mail" />
+            <TableColumn fx:id="isAdmin" prefWidth="75.0" text="Job" />
+            <TableColumn fx:id="isDeleted" prefWidth="75.0" text="Active" />
+        </columns>
+    </TableView>
+   <JFXTextArea fx:id="resultConsole" editable="false" layoutX="479.0" layoutY="520.0" prefHeight="116.0" prefWidth="200.0" styleClass="jfx-text-area" stylesheets="@style.css" unFocusColor="WHITE" wrapText="true" />
+    <Text fill="WHITE" layoutX="520.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result Console" wrappingWidth="127.56250685453415">
+        <font>
+            <Font name="Kefa Regular" size="17.0" />
+        </font>
+    </Text>
+   <JFXButton fx:id="searchBtn" layoutX="520.0" layoutY="280.0" onAction="#searchAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Search" />
+   <JFXButton fx:id="addBtn" layoutX="520.0" layoutY="320.0" onAction="#insertAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Add" />
+   <JFXButton fx:id="updateBtn" layoutX="520.0" layoutY="360.0" onAction="#updateAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Update" />
+   <JFXButton fx:id="reactivateBtn" layoutX="520.0" layoutY="400.0" onAction="#reactivateAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Reactivate" />
+   <JFXButton fx:id="deleteBtn" layoutX="520.0" layoutY="440.0" onAction="#deleteAction" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Delete" />
+   <JFXTextField fx:id="idField" focusColor="#2196f3" layoutX="495.0" layoutY="40.0" promptText="ID" styleClass="jfx-textfield" stylesheets="@style.css" unFocusColor="WHITE">
+      <font>
+         <Font name="Kefa Regular" size="13.0" />
+      </font>
+   </JFXTextField>
+   <JFXPasswordField fx:id="passwordField" focusColor="#2196f3" layoutX="495.0" layoutY="120.0" promptText="Password" styleClass="jfx-textfield" stylesheets="@style.css" unFocusColor="WHITE">
+      <font>
+         <Font name="Kefa Regular" size="13.0" />
+      </font>
+   </JFXPasswordField>
+   <JFXTextField fx:id="usernameField" focusColor="#2196f3" layoutX="495.0" layoutY="80.0" promptText="User Name" styleClass="jfx-textfield" stylesheets="@style.css" unFocusColor="WHITE" />
+   <JFXTextField fx:id="phoneField" focusColor="#2196f3" layoutX="495.0" layoutY="160.0" promptText="Phone" styleClass="jfx-textfield" stylesheets="@style.css" unFocusColor="WHITE" />
+   <JFXTextField fx:id="emailField" focusColor="#2196f3" layoutX="495.0" layoutY="200.0" promptText="E-Mail" styleClass="jfx-textfield" stylesheets="@style.css" unFocusColor="WHITE" />
+</AnchorPane>

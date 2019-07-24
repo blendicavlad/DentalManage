@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="medicDashboard" layoutX="10.0" layoutY="10.0" prefHeight="594.0" prefWidth="693.0" style="-fx-background-color: #2D3447;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller.medic.MedicDashboardController">
+    <Label layoutX="225.0" layoutY="10.0" text="DASHBOARD" textFill="WHITE">
+        <font>
+            <Font name="Kefa Bold" size="35.0" />
+        </font>
+    </Label>
+    <Label layoutX="15.0" layoutY="130.0" text="Appointments for today:" textFill="WHITE">
+        <font>
+            <Font name="Kefa Bold" size="24.0" />
+        </font>
+    </Label>
+    <Text fx:id="todayAppointmentsNo" fill="#2196f3" layoutX="307.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+        <font>
+            <Font name="Kefa Regular" size="25.0" />
+        </font>
+    </Text>
+    <Label layoutX="382.0" layoutY="130.0" text="Total Patients:" textFill="WHITE">
+        <font>
+            <Font name="Kefa Bold" size="24.0" />
+        </font>
+    </Label>
+    <Text fx:id="totalPatientsNo" fill="#2196f3" layoutX="575.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="60.6904296875">
+        <font>
+            <Font name="Kefa Regular" size="24.0" />
+        </font>
+    </Text>
+   <JFXButton fx:id="getWorkloadBtn" layoutX="421.0" layoutY="307.0" onAction="#getWorkload" prefWidth="120.0" styleClass="jfx-buttonUserPane" stylesheets="@style.css" text="Get workload" />
+   <Label layoutX="52.0" layoutY="175.0" text="Next appointment" textFill="WHITE">
+      <font>
+         <Font name="Kefa Bold" size="24.0" />
+      </font>
+   </Label>
+   <JFXTextArea fx:id="nextAppointmentTextArea" layoutX="28.0" layoutY="226.0" prefHeight="359.0" prefWidth="254.0" styleClass="jfx-text-area-native" stylesheets="@style.css" />
+   <Label layoutX="388.0" layoutY="178.0" text="Timely workload" textFill="WHITE">
+      <font>
+         <Font name="Kefa Bold" size="20.0" />
+      </font>
+   </Label>
+   <JFXDatePicker fx:id="StartDatePicker" defaultColor="#2196f3" layoutX="387.0" layoutY="226.0" promptText="Start date" stylesheets="@style.css" />
+   <JFXDatePicker fx:id="EndDatePicker" defaultColor="#2196f3" layoutX="387.0" layoutY="259.0" promptText="End date" stylesheets="@style.css" />
+   <Label fx:id="percentageText" layoutX="448.0" layoutY="341.0" prefHeight="24.0" prefWidth="85.0" textFill="WHITE">
+      <font>
+         <Font name="Kefa Bold" size="20.0" />
+      </font>
+   </Label>
+   <ImageView fitHeight="193.0" fitWidth="223.0" layoutX="365.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@dentistLogo.png" />
+      </image>
+   </ImageView>
+</AnchorPane>
